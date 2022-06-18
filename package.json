@@ -5,7 +5,8 @@
   "scripts": {
     "git-config": "./tools/git-config.sh",
     "git-import": "./tools/git-import.sh",
-    "boot": "npm install",
+    "boot": "npm install && npm run git-config && rm -fr src && git-import",
+    "update": "git submodule update --init --recursive",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
