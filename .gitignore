@@ -21,3 +21,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+/src/
+/src.backup-*/
+
+/yarn.lock
+/package-lock.json

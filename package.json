@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "git-config": "./tools/git-config.sh",
-    "git-import": "./tools/git-import.sh",
-    "boot": "npm install && npm run git-config && rm -fr src && npm run git-import",
+    "config-git": "git config --global http.sslVerify false && git config --global init.defaultbranch main && git config --global credential.helper store",
+    "clone-repo": "./clone-repo-as-src.sh",
+    "boot": "rm -fr node_modules && npm install && npm run config-git && npm run clone-repo",
     "update": "git submodule update --init --recursive",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
@@ -102,10 +102,7 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "browserslist": [
-    "Android >= 4.4",
-    "ios >= 9"
-  ],
+  "browserslist": ["Android >= 4.4", "ios >= 9"],
   "resolutions": {
     "@babel/runtime": "~7.17.9"
   },
