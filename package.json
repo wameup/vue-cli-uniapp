@@ -6,7 +6,6 @@
     "config-git": "git config --global http.sslVerify false && git config --global init.defaultbranch main && git config --global credential.helper store",
     "clone-repo": "./clone-repo-as-src.sh",
     "boot": "rm -fr node_modules && npm install && npm run config-git && npm run clone-repo",
-    "update": "git submodule update --init --recursive",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
